@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eth-gas-tracker"
+version = "0.2.1"
+description = "CLI tool to track gas burn across game actions and find quiet windows"
+authors = [
+    { name = "Alex Vance", email = "alex@vance.dev" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "httpx>=0.25.0",
+    "rich>=13.4.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+]
+
+[project.scripts]
+gas-tracker = "eth_gas_tracker.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["eth_gas_tracker*"]
