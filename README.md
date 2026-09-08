@@ -53,3 +53,5 @@ Polls base fees every few seconds in terminal:
 ```bash
 gas-tracker watch --interval 4
 ```
+
+<!-- checked: 2026-09-08 -->
